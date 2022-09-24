@@ -134,7 +134,11 @@ class FreeplayState extends MusicBeatState
 			trace(md);
 		 */
 
-		super.create();
+		#if android
+		addVirtualPad(LEFT_FULL, A_B);
+		#end	
+		
+			super.create();
 	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String)
