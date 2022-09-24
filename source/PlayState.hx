@@ -2835,13 +2835,7 @@ class PlayState extends MusicBeatState
 		if (FlxG.save.data.fpsCap > 290)
 			(cast (Lib.current.getChildAt(0), Main)).setFPSCap(290);
 
-		#if windows
-		if (luaModchart != null)
-		{
-			luaModchart.die();
-			luaModchart = null;
-		}
-		#end
+		
 
 		canPause = false;
 		FlxG.sound.music.volume = 0;
