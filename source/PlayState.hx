@@ -1027,7 +1027,11 @@ class PlayState extends MusicBeatState
 		scoreTxt.cameras = [camHUD];
 		replayTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-		if (FlxG.save.data.songPosition)
+		#if android
+		addAndroidControls();		
+		androidControls.visible = true;	
+		#end		
+				if (FlxG.save.data.songPosition)
 		{
 			songPosBG.cameras = [camHUD];
 			songPosBar.cameras = [camHUD];
